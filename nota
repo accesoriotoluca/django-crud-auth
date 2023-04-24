@@ -1,4 +1,7 @@
 """ 
+git add .
+git commit -m ''
+git push origin m
 
 git init: Initialized empty Git repository in ruta/escritorio
 creo que es cuando viene de una USB: git config --global --add safe.directory 'E:/ejercicios programación/ejercicio 1'
