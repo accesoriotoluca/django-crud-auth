@@ -1,0 +1,29 @@
+""" 
+isaac_admin / isaac12345
+
+* SET FORM ACTION: in 'form action' use 'reverse lazy function' to url template tag
+    . reference the index url
+    . not submit the form in the view
+    . inspect elements: we got a 'form element'
+    . specify where the submission should be sent on server
+    . looks up urls by name, turns them into proper path for url on server
+    . gives a way of specifying that
+
+    from django.urls import reverse_lazy
+    from crispy_forms.helper import FormHelper
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.helper = FormHelper(self)
+
+    >>> self.helper.form_action = reverse_lazy('index')
+    >>> AGREGA UNA ACCION: <form action="/"></form>
+
+* AGREGAR UN BOTON SUBMIT AL CUESTIONARIO
+
+    from crispy_forms.helper import FormHelper
+    from crispy_forms.layout import Submit
+
+    self.helper.add_input(Submit('submit','submit')) 
+    
+    """
